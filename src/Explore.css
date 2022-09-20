@@ -1,0 +1,827 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+  }
+
+  a{
+      text-decoration: none;
+  }
+  ul{
+      list-style: none;
+  }
+  .active{
+      color: #f3461a;
+      font-weight: bold;
+  }
+  .navbar{
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   
+  }
+  .logo{
+      height: 100px;
+      width: 140px;
+      padding: 20px;
+      border-radius: 1.5rem;
+  }
+  .nav-links{
+      display: flex;
+      align-items: center;
+  }
+  .nav-links .links{
+    margin: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    transition:all 0.5s ease;
+}
+.nav-links .active{
+    margin: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition:all 0.5s ease;
+    color: #f3461a;
+    font-weight: bold;
+}
+  .links{
+      transition: all 0.5s ease;
+  }
+  .links:hover{
+      color: rgb(245, 200, 158);
+      
+  }
+  .navbar:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background: rgb(141, 13, 13);
+      transform:scaleX(0);
+      transform-origin: right;
+      transition: transform .4s linear;
+      
+  }
+  .navbar:hover:before{
+      transform:scaleX(1);
+      transform-origin: left;
+  }
+  .menu-btn{
+      position: absolute;
+      top: 35px;
+      right: 30px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: none;
+  }
+  .openBtn {
+    background:linear-gradient(to right, rgb(80, 78, 78), white);
+    border: none;
+    padding: 0 20px 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+  
+  .openBtn:hover {
+    background:linear-gradient(to left, rgb(80, 78, 78), white);
+    letter-spacing: 1px;}
+  .nav-links .openBtn{
+      border-radius: 5px;
+      padding: 10px 5px 10px 5px;}
+      .overlay {
+        height: 100%;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0, 0.9);
+      }
+      
+    .overlay-content {
+        position: relative;
+        top: 46%;
+        width: 80%;
+        text-align: center;
+        margin-top: 30px;
+        margin: auto;
+      }
+    
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        cursor: pointer;
+        color: white;
+      }
+      
+    .overlay .closebtn:hover {
+        color: red;
+      }
+      
+    .overlay input[type=text] {
+        padding: 15px;
+        font-size: 17px;
+        border: none;
+        outline: none;
+        float: left;
+        width: 80%;
+        background: white;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+    .overlay input[type=text]:hover {
+        background: #f1f1f1;
+        
+      }
+      
+    .overlay button {
+        float: left;
+        width: 10%;
+        padding: 15px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      
+    .overlay button:hover {
+        background: #bbb;
+}
+.header{
+    background: linear-gradient(rgba(1, 20, 49, 0.774), rgba(3, 3, 14, 0.787)),url(./Img/fire.jpg) no-repeat center center fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    
+}
+.category1 button{
+    margin-top: 10%;
+    padding: 10px 18px;
+    margin-left: 10px;
+    font-size: 20px;
+    border: none;
+    background: orangered;
+    letter-spacing:1px;
+    border-radius: 5px;
+}
+.category2 button{
+    margin-top: 4%;
+    border: none;
+    background: orangered;
+    margin-left: 10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    letter-spacing:1px;
+}
+.category3 button{
+    margin-top: 4%;
+    border: none;
+    background: orangered;
+    margin-left: 10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    letter-spacing:1px;
+}
+button:hover{
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.title{
+    font-size: 3vmin;
+    margin:4%;
+}
+.confess{
+    margin: 5%;
+    width: 80%;
+}
+.card{
+    display: flex;
+    margin-left: 30px;
+}
+.flip-card {
+    width: 200px;
+    height: 50vh;
+    perspective: 1000px;
+    border-radius: 5px;
+  }
+  .flip-card h1{
+      font-size: 3vmin;
+      padding: 5px;
+  }
+  .flip-card p{
+      padding: 20px 5px;
+      font-size: 2.2vmin;
+  }
+  .flip-card-inner {
+    width: 200px;
+    height: 40vh;
+    position: relative;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .flip-card-inner img{
+    border-radius: 5px;
+      width: 200px;
+      height: 40vh;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 200px;
+    height: 40vh;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-back {
+    background:linear-gradient(to bottom left, rgba(0, 0, 0, 0.801),rgba(88, 86, 86, 0.685));
+    color: white;
+    transform: rotateY(180deg);
+  }
+footer{
+    background: #050001e1;
+    padding: 40px 0;
+}
+footer .social-icons{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #ff0000;
+}
+footer .social-icons a{
+    justify-content: space-between;
+    font-size: 40px;
+    color: inherit;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+footer .social-icons a:hover{
+    opacity: 0.5;
+}
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    list-style: none;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+footer ul li{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 15px;
+    opacity: 2.5;
+}
+footer ul li:hover{
+    opacity: 0.8;
+}
+footer p{
+    margin-top: 15px;
+    color: rgba(195, 188, 188, 0.904);
+    text-align: center;
+}
+
+@media only screen and (max-width:1050px){
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top:20px;
+        left:30px;
+        width: 160px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #30020c;
+        margin-top: -1500px;
+        transition: all 0.5s ease;
+    }
+    .overlay input[type=text]{
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 10%;
+    }
+    .nav-links li{
+        margin: 30px auto;
+    }
+    .navbar:before{
+        display: none;
+    }
+    .overlay input[type=text]{
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .container{
+        width: 90%;
+        height: 50%;
+    }
+    .category1 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 15px;
+        margin-left: 5px;
+    }
+    .category2 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .category3 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .title{
+        margin-left:5%;
+        font-size: 2vmin;
+        margin-top: 5%;
+    }
+    .card{
+        width: 170px;
+        height: 30vh;
+        margin-left: 10px;
+    }
+    .flip-card{
+        width: 170px;
+        height: 30vh;
+    }
+    .flip-card-inner {
+        width: 170px;
+        height: 30vh;
+    }
+    .flip-card-inner img{
+        width: 170px;
+        height: 30vh;
+    }
+    .flip-card-front{
+        width: 170px;
+        height: 30vh;
+    }
+    .flip-card-back{
+        width: 160px;
+        height: 30vh;
+    }
+    .flip-card h1{
+        font-size: 2.5vmin;
+        padding: 10px 5px;
+    }
+    .flip-card p{
+        padding: 5px 3px;
+        font-size:1.6vmin;
+    }
+}
+@media only screen and (max-width:860px){
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top:20px;
+        left:30px;
+        width: 140px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #30020c;
+        margin-top: -1500px;
+        transition: all 0.5s ease;
+    }
+    .overlay input[type=text] {
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 10%;
+    }
+    .nav-links li{
+        margin: 30px auto;
+    }
+    .navbar:before{
+        display: none;
+    }
+    .overlay input[type=text] {
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .container{
+        width: 90%;
+        height: 50%;
+    }
+    .category1 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 15px;
+        margin-left: 5px;
+    }
+    .category2 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .category3 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .title{
+        margin-left:5%;
+        font-size: 2vmin;
+        margin-top: 5%;
+    }
+    .card{
+        width: 140px;
+        height: 30vh;
+        margin-left: 10px;
+    }
+    .flip-card{
+        width: 145px;
+        height: 30vh;
+    }
+    .flip-card-inner {
+        width: 145px;
+        height: 30vh;
+    }
+    .flip-card-inner img{
+        width: 145px;
+        height: 30vh;
+    }
+    .flip-card-front{
+        width: 145px;
+        height: 30vh;
+    }
+    .flip-card-back{
+        width: 145px;
+        height: 30vh;
+    }
+    .flip-card h1{
+        font-size: 2.2vmin;
+    }
+    .flip-card p{
+        padding: 5px 3px;
+        font-size: 1.8vmin;
+    }
+
+}
+@media screen and (max-width:768px){
+    .title{
+        margin-left:5%;
+        font-size: 3vmin;
+        margin-top: 5%;
+    }
+    .overlay input[type=text] {
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .container{
+        width: 90%;
+        height: 50%;
+    }
+    .category1 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 15px;
+        margin-left: 5px;
+    }
+    .category2 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .category3 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .title{
+        margin-left:5%;
+        font-size: 2vmin;
+        margin-top: 5%;
+    }
+    .card{
+        width: 120px;
+        height: 20vh;
+        margin-left: 10px;
+    }
+    .flip-card{
+        width: 100px;
+        height: 20vh;
+    }
+    .flip-card-inner {
+        width: 100px;
+        height: 20vh;
+    }
+    .flip-card-inner img{
+        width: 100px;
+        height: 20vh;
+    }
+    .flip-card-front{
+        width: 100px;
+        height: 20vh;
+    }
+    .flip-card-back{
+        width: 100px;
+        height: 20vh;
+    }
+    .flip-card h1{
+        font-size: 2vmin;
+    }
+    .flip-card p{
+        padding: 10px 3px;
+        font-size: 1.4vmin;
+    }
+}
+@media screen and (max-width:600px){
+    .title{
+        margin-left:5%;
+        font-size: 3vmin;
+        margin-top: 5%;
+    }
+    .overlay input[type=text] {
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .container{
+        width: 90%;
+        height: 50%;
+    }
+    .category1 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 15px;
+        margin-left: 5px;
+    }
+    .category2 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .category3 button{
+        font-size: 3vmin;
+        margin-top: 10%;
+        padding: 10px 10px;
+        margin-left: 5px;
+    }
+    .title{
+        margin-left:5%;
+        font-size: 2vmin;
+        margin-top: 5%;
+    }
+    .card{
+        width: 120px;
+        height: 25vh;
+        margin-left: 10px;
+    }
+    .flip-card{
+        width: 95px;
+        height: 25vh;
+    }
+    .flip-card-inner {
+        width: 95px;
+        height: 25vh;
+    }
+    .flip-card-inner img{
+        width:95px;
+        height: 25vh;
+    }
+    .flip-card-front{
+        width: 95px;
+        height: 25vh;
+    }
+    .flip-card-back{
+        width: 95px;
+        height: 25vh;
+    }
+    .flip-card h1{
+        font-size: 2vmin;
+    }
+    .flip-card p{
+        padding: 10px 3px;
+        font-size: 1.4vmin;
+    }
+}
+@media screen and (max-width:500px){
+    .title{
+        margin-left:5%;
+        font-size: 3vmin;
+        margin-top: 5%;
+    }
+    .overlay input[type=text] {
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .container{
+        width: 90%;
+        height: 50%;
+    }
+    .category1 button{
+        font-size: 2.4vmin;
+        margin-top: 10%;
+        padding: 10px 8px;
+        margin-left: 5px;
+    }
+    .category2 button{
+        font-size: 2.4vmin;
+        margin-top: 10%;
+        padding: 10px 5px;
+        margin-left: 5px;
+    }
+    .category3 button{
+        font-size: 2.4vmin;
+        margin-top: 10%;
+        padding: 10px 5px;
+        margin-left: 5px;
+    }
+    section{
+     width: 160px;
+    }
+    .title{
+        margin-left: 5%;
+        font-size: 1.3vmin;
+        margin-top: 5%;
+    }
+    .card{
+        width: px;
+        height: 25vh;
+        margin-left: 10px;
+    }
+    .flip-card{
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card-inner {
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card-inner img{
+        width:85px;
+        height: 25vh;
+    }
+    .flip-card-front{
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card-back{
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card h1{
+        font-size: 2vmin;
+    }
+    .flip-card p{
+        padding: 10px 3px;
+        font-size: 1.4vmin;
+    }
+}
+@media screen and (max-width:500px){
+    .title{
+        margin-left:5%;
+        font-size: 3vmin;
+        margin-top: 5%;
+    }
+    .overlay input[type=text] {
+        width: 70%;
+    }
+    .overlay button{
+        width:15%;
+    }
+    .container{
+        width: 90%;
+        height: 50%;
+    }
+    .category1 button{
+        font-size: 2.4vmin;
+        margin-top: 10%;
+        padding: 10px 8px;
+        margin-left: 5px;
+    }
+    .category2 button{
+        font-size: 2.4vmin;
+        margin-top: 10%;
+        padding: 10px 5px;
+        margin-left: 5px;
+    }
+    .category3 button{
+        font-size: 2.4vmin;
+        margin-top: 10%;
+        padding: 10px 5px;
+        margin-left: 5px;
+    }
+    section{
+     width: 160px;
+    }
+    .title{
+        margin-left: 5%;
+        font-size: 1.3vmin;
+        margin-top: 5%;
+    }
+    .card{
+        width: px;
+        height: 25vh;
+        margin-left: 10px;
+    }
+    .flip-card{
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card-inner {
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card-inner img{
+        width:85px;
+        height: 25vh;
+    }
+    .flip-card-front{
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card-back{
+        width: 85px;
+        height: 25vh;
+    }
+    .flip-card h1{
+        font-size: 2vmin;
+    }
+    .flip-card p{
+        padding: 10px 3px;
+        font-size: 1.4vmin;
+    }
+}

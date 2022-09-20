@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+  }
+
+  a{
+      text-decoration: none;
+  }
+  ul{
+      list-style: none;
+  }
+  .active{
+      color: #f3461a;
+      font-weight: bold;
+  }
+  .navbar{
+    background:  linear-gradient(rgba(1, 20, 49, 0.774), rgba(3, 3, 14, 0.787)),url(../Img/fire.jpg) no-repeat center center fixed;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   
+  }
+  .logo{
+      height: 100px;
+      width: 140px;
+      padding: 20px;
+      border-radius: 1.5rem;
+  }
+  .nav-links{
+      display: flex;
+      align-items: center;
+  }
+.nav-links .links{
+    margin: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    transition:all 0.5s ease;
+}
+.nav-links .active{
+    margin: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition:all 0.5s ease;
+    color: #f3461a;
+    font-weight: bold;
+}
+  .links{
+      transition: all 0.5s ease;
+  }
+  .links:hover{
+      color: rgb(245, 200, 158);
+      
+  }
+  .navbar:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background: rgb(141, 13, 13);
+      transform:scaleX(0);
+      transform-origin: right;
+      transition: transform .4s linear;
+      
+  }
+  .navbar:hover:before{
+      transform:scaleX(1);
+      transform-origin: left;
+  }
+  .menu-btn{
+      position: absolute;
+      top: 35px;
+      right: 30px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: none;
+  }
+.header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#section{
+    background:linear-gradient(to bottom right,rgba(15, 15, 110, 0.835),rgba(109, 31, 12, 0.808)),url(../Img/yel.jpg)no-repeat center;
+    width: 99.99%;
+    background-size:  cover;
+    border-bottom: 2px solid rgb(110, 110, 110);
+}
+.user{
+    width: 50%;
+    margin-top: 5%;
+    text-align: center;
+}
+.user img{
+    border-radius: 100%;
+    
+}
+.user h1{
+    font-size: 4vmin;
+    color: white;
+}
+.user h5{
+color: white;
+padding: 10px;
+}
+.acc ul li{
+    display:inline-block;
+    padding: 20px 10px;
+    
+} 
+.acc li a{
+    display: inline block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.acc li a:hover{
+    color:rgb(255, 38, 0);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.acc{
+    border-bottom: 2px solid grey;
+}
+.lib{
+    width: 100%;
+    height: 330px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px auto;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+} 
+.fav{
+    width: 100%;
+    height: 330px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px auto;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+.title{
+    margin-left:5%;
+    font-size: 3vmin;
+    margin-top: 5%;
+}
+.fav img{
+    margin: 10px;
+    border-radius: 5px;
+}
+.lib img{
+    border-radius: 10px;
+    margin: 10px;
+}
+footer{
+    background: #050001e1;
+    padding: 40px 0;
+}
+footer .social-icons{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #ff0000;
+}
+footer .social-icons a{
+    justify-content: space-between;
+    font-size: 40px;
+    color: inherit;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+footer .social-icons a:hover{
+    opacity: 0.5;
+}
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    list-style: none;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+footer ul li{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 10px;
+    opacity: 2.5;
+}
+footer ul li:hover{
+    opacity: 0.8;
+}
+footer p{
+    margin-top: 15px;
+    color: rgba(195, 188, 188, 0.904);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1050px){   
+    .acc li a{
+        display: inline block;
+        font-size: 2vmin;
+    }
+    .lib{
+        width: 100%;
+        height: 350px;
+        align-items: center;
+    } 
+    .fav{
+        width: 100%;
+        height: 350px;
+        align-items: center;
+    }
+    .fav img{
+        margin: 10px;
+        width: 170px;
+        height: 35vh;
+       
+    }
+    .lib img{
+        margin: 10px;
+        width: 170px;
+        height: 35vh;
+    }
+} 
+@media screen and (max-width:1030px){   
+    .acc li a{
+        display: inline block;
+        font-size: 2vmin;
+    }
+    .lib{
+        width: 100%;
+        height: 350px;
+        align-items: center;
+    } 
+    .fav{
+        width: 100%;
+        height: 350px;
+        align-items: center;
+    }
+    .fav img{
+        margin: 10px;
+        width: 160px;
+        height: 35vh;
+       
+    }
+    .lib img{
+        margin: 10px;
+        width: 160px;
+        height: 35vh;
+    }
+} 
+@media only screen and (max-width:860px){
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top:20px;
+        left:30px;
+        width: 140px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #30020c;
+        margin-top: -1500px;
+        transition: all 0.5s ease;
+    }
+    .menu-btn{
+        display: block;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 10%;
+    }
+    .nav-links li{
+        margin: 30px auto;
+    }
+    .navbar:before{
+        display: none;
+    }
+    .user{
+        width: 50%;
+    }
+    .user h5{
+        font-size: 3vmin;
+    }
+    .acc ul li{
+        display:inline-block;
+        padding: 20px 0;  
+    } 
+    .acc li a{
+        display: inline block;
+        font-size: 1.7vmin;
+    }
+    .lib{
+        width: 100%;
+        height: 330px;
+        align-items: center;
+        
+    } 
+    .fav{
+        width: 100%;
+        height: 330px;
+        align-items: center;
+    }
+    .fav img{
+        margin: 10px;
+        width: 150px;
+        height: 45vh;
+       
+    }
+    .lib img{
+        margin: 10px;
+        width: 150px;
+        height: 45vh;
+    }
+        
+    
+}
+@media screen and (max-width:768px){
+    .user{
+        width: 60%;
+    }
+    .acc ul li{
+        display:inline-block;
+        padding: 20px 5px;    
+    } 
+    .acc li a{
+        display: inline block;
+        font-size: 2vmin;
+    }
+    .lib{
+        width: 100%;
+        height: 310px;
+        align-items: center;
+    } 
+    .fav{
+        width: 100%;
+        height: 310px;
+        align-items: center;
+    }
+    .fav img{
+        margin: 10px;
+        width: 130px;
+        height: 25vh;
+       
+    }
+    .lib img{
+        margin: 10px;
+        width: 130px;
+        height: 25vh;
+    }
+} 
+@media screen and (max-width:600px){
+    .acc ul li{
+        display:inline-block;
+        padding: 20px 5px;    
+    } 
+    .acc li a{
+        display: inline block;
+        font-size: 1.2vmin;
+    }
+    .title h1{
+        font-size: 6vmin;
+    }
+    .lib{
+        width: 100%;
+        height: 270px;
+        align-items: center;
+    } 
+    .fav{
+        width: 100%;
+        height: 270px;
+        align-items: center;
+    }
+    .fav img{
+        margin: 10px;
+        width: 100px;
+        height: 20vh;
+       
+    }
+    .lib img{
+        margin: 10px;
+        width: 100px;
+        height: 20vh;
+    }
+} 
+@media screen and (max-width:499px){
+    .user{
+        width: 90%;
+    }
+    .acc li a{
+        display: inline block;
+        font-size: 2.5vmin;
+        letter-spacing: 1px;
+        padding: 10px 5px;
+    }
+    .lib{
+        display: block;
+        width: 100%;
+        height: 500%;
+        align-items: center;
+    } 
+    .fav{
+        display: block;
+        width: 100%;
+        height: 500%;
+        align-items: center;
+    }
+    .fav img{
+        margin: 10px;
+        width: 70%;
+        height: 50vh;  
+    }
+    .lib img{
+        margin: 10px;
+        width: 70%;
+        height: 50vh;
+    }
+} 
